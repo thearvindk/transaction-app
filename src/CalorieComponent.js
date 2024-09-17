@@ -14,7 +14,7 @@ function CalorieComponent() {
     }, []);
     const fetchTotalCalories = async () => {
         try {
-            const response = await axios.get('http://3.7.251.89:8090/Calories/total');
+            const response = await axios.get('http://13.233.58.169:8090/Calories/total');
             setTotalCalories(response.data);
         } catch (error) {
             console.error('Error fetching Total Calories', error);
@@ -22,7 +22,7 @@ function CalorieComponent() {
     };
     const fetchCalorieData = async () => {
         try {
-            const response = await axios.get('http://3.7.251.89:8090/Calories');
+            const response = await axios.get('http://13.233.58.169:8090/Calories');
             setCalories(response.data);
         } catch (error) {
             console.error('Error fetching Calorie Data', error);
@@ -31,7 +31,7 @@ function CalorieComponent() {
 
     const addCalorieData = async () => {
         try {
-            const response = await axios.post('http://3.7.251.89:8090/Calories', {
+            const response = await axios.post('http://13.233.58.169:8090/Calories', {
                 description,
                 count: parseFloat(count),
             });
